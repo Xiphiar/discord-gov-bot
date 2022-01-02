@@ -21,6 +21,7 @@ async function getProps(): Promise<any> {
 }
 
 async function checkProposals(channel: any) {
+  console.log("Checking proposals");
   var known = await storage.getItem('knownProposals') || []
   let update = false
 
@@ -34,7 +35,7 @@ async function checkProposals(channel: any) {
             const propEmbed = new MessageEmbed()
               // @ts-ignore
               //.setColor(getColor(punkID))
-              .setTitle(`New Governance proposal on ${process.env.CHAIN_NAME}`)
+              .setTitle(`New Governance Proposal on ${process.env.CHAIN_NAME}`)
               .setURL(`${process.env.EXPLORER_URL}${prop.id}`)
               .setDescription(`Proposal ${prop.id} **${prop.content.value.title}** has entered voting period.`)
               .setTimestamp()
@@ -138,7 +139,7 @@ client.once("ready", async () => {
   //setInterval(function() {intervalFunc(channel)}, process.env.INTERVAL);
   //checkProposals(channel);
 
-  var job = new CronJob('0 * * * * *', function() {
+  var job = new CronJob('0 */5 * * * *', function() {
     checkProposals(channel);
   }, null, true, 'America/New_York');
   job.start(); 
