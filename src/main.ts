@@ -144,7 +144,7 @@ client.once("ready", async () => {
   }, null, true, 'America/New_York');
   job.start(); 
 
-  var job2 = new CronJob('0 18 * * * *', function() {
+  var job2 = new CronJob('0 0 18 * * *', function() {
     checkVotes(channel);
   }, null, true, 'America/New_York');
   job2.start(); 
