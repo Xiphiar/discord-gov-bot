@@ -38,7 +38,7 @@
     "axios": "^0.24.0",
     "cron": "^1.8.2",
     "discord.js": "^13.4.0",
-    "discordx": "^9.1.5",
+    "discordx": "^11.0.8",
     "dotenv": "^10.0.0",
     "node-fetch": "^3.1.0",
     "node-persist": "^3.1.0",
