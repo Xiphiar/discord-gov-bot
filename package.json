@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@discordx/importer": "^1.1.2",
-    "@discordx/utilities": "^3.1.8",
+    "@discordx/utilities": "^5.1.0",
     "@types/node-fetch": "^3.0.3",
     "axios": "^0.24.0",
     "cron": "^1.8.2",
